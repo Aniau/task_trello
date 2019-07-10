@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<defs>
+<font id="link" horiz-adv-x="1000" >
+<font-face font-family="link" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="star" unicode="&#xe801;" d="M4 457q14 41 57 47l262 39 113 235q19 41 64 41t65-41l113-235 262-39q43-6 56-47t-15-70l-192-191 43-264q8-43-29-68-18-14-41-14-18 0-35 8l-227 123-226-123q-18-8-35-8-24 0-41 14-38 25-30 68l43 264-189 191q-32 29-18 70z m69-21l191-191q25-26 19-61l-44-264 226 123q16 8 35 8t35-8l227-123-45 264q-6 35 20 61l191 191-260 37q-39 6-54 41l-114 234-113-234q-16-35-55-39z" horiz-adv-x="1001" />
+</font>
+</defs>
+</svg>
