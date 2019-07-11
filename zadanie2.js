@@ -1,5 +1,5 @@
                 function placeholder(element) {
-                    return $("<li class='card1' id='backgroundColor'>");
+                    return $("<li class='sortable' id='backgroundColor'>");
                 }
 
                 $(document).ready(function() {
@@ -17,12 +17,5 @@
                         connectWith: "#sortable-listA",
                         placeholder: placeholder
                     });
-					  $("#sortable-listA").kendoSortable({
-                        connectWith: "#sortable-listC",
-                        placeholder: placeholder
-                    });
-					  $("#sortable-listB").kendoSortable({
-                        connectWith: "#sortable-listA",
-                        placeholder: placeholder
-                    });
+
                 });
