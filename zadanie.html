@@ -10,37 +10,89 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/link.css">
   <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="style2.css" type="text/css">
+  <link href="styles/kendo.common.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
 
 
+    <script src="js/kendo.all.min.js"></script>
 </head>
 <body>
 	<div id="container">
-		<div id="welcome">Welcome board</div><div id="icon"><i class="icon-star"></i></div>
-		<div id="columns">
-			<div class="column" draggable="true">
-				<header>TO DO</header>
-				<div class="dots">...</div>
-				<div class="card" draggable="true">Task 1 - Create interface of Trello</div>
-				<div class="card" draggable="true">Task 2 - connect interface of Trello with cs file</div>
-				<div class="card" draggable="true">Task 3 - Commit changes od GitHub page </div>
-				<figcaption>Add a card...</figcaption>
+		<div id="v1">
+			<div id="welcome">Welcome board</div><div id="icon"><i class="icon-star"></i></div>
+			<div id="columns">
+				<div class="column" draggable="true">
+					<header>TO DO</header>
+					<div class="dots">...</div>
+					<div class="card" draggable="true">Task 1 - Create interface of Trello</div>
+					<div class="card" draggable="true">Task 2 - connect interface of Trello with cs file</div>
+					<div class="card" draggable="true">Task 3 - Commit changes od GitHub page </div>
+					<figcaption>Add a card...</figcaption>
+				</div>
+				<div class="column" draggable="true">
+					<header>IN PROGRESS</header>
+					<div class="dots">...</div>
+					<div class="card" draggable="true">Task 4 - Make a coffee before starting another day of hard working with Trello</div>
+					<div class="card" draggable="true">Task 5 - Add activity on the page to make a cards interactive and then finish project with High Five</div>
+					<figcaption>Add a card...</figcaption>
+				</div>
+				<div class="column" draggable="true">
+					<header>DONE</header>
+					<div class="dots">...</div>
+					<div class="card" draggable="true">Task 5 - Final release and commit of the project of Trello and finish it with double High Five!</div>
+					<figcaption>Add a card...</figcaption>
+				</div>
 			</div>
-			<div class="column" draggable="true">
-				<header>IN PROGRESS</header>
-				<div class="dots">...</div>
-				<div class="card" draggable="true">Task 4 - Make a coffee before starting another day of hard working with Trello</div>
-				<div class="card" draggable="true">Task 5 - Add activity on the page to make a cards interactive and then finish project with High Five</div>
-				<figcaption>Add a card...</figcaption>
-			</div>
-			<div class="column" draggable="true">
-				<header>DONE</header>
-				<div class="dots">...</div>
-				<div class="card" draggable="true">Task - Final release and commit of the project of Trello and finish it with double High Five!</div>
-				<figcaption>Add a card...</figcaption>
-			</div>
+		</div>
+		<div id="v2">
+			<div id="welcome1">Welcome board</div><div id="icon"><i class="icon-star"></i></div>
+				<div id="columns1">
+					<div class="demo-section hidden-on-narrow two-way wide">
+						<div class="list-wrapper" >
+							<header>TO DO</header>
+							<div class="dots1">...</div>
+							<ul id="sortable-listA">
+								<il class="card1">Task 1 - Create interface of Trello</il>
+								<il class="card1">Task 2 - connect interface of Trello with cs file</il>
+								<il class="card1">Task 3 - Commit changes od GitHub page </il>
+							</ul>
+							<figcaption>Add a card...</figcaption>
+						</div>
+					</div>
+					 <div class="demo-section hidden-on-narrow two-way wide">
+						<div class="list-wrapper">
+							<header>IN PROGRESS</header>
+							<div class="dots1">...</div>
+							<ul id="sortable-listB">
+								<il class="card1">Task 4 - Make a coffee before starting another day of hard working with Trello</il>
+								<il class="card1">Task 5 - Add activity on the page to make a cards interactive and then finish project with High Five</il>
+							</ul>
+								<figcaption>Add a card...</figcaption>
+						</div>
+					</div>
+
+					<div class="demo-section hidden-on-narrow two-way wide">
+						<div class="list-wrapper">
+							<header>DONE</header>
+							<div class="dots1">...</div>
+							<ul id="sortable-listC">
+								<il class="card1">Task 5 - Final release and commit of the project of Trello and finish it with double High Five!</i>
+							</ul>
+							<figcaption>Add a card...</figcaption>
+						</div>
+					</div>
+				</div>
 		</div>
 	</div>
 <script src="zadanie.js"></script>
+<script src="zadanie2.js"></script>
+
+<script src="jquery-3.4.1.min.js"></script>
 </body>
 </html>

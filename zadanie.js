@@ -1,10 +1,10 @@
-			var daneElementu= null; //zmienna do zapobiegania prz
+			var SrcElement= null; 
 			function handleDragStart(e) 
 			{
-			  this.style.opacity = '1';  //  ustawienie na brak przezroczystosci po opuszczeniu elementu
-				daneElementu = this;
+			  this.style.opacity = '1';  //  set opacity of the element for minimum value
+				SrcElement = this;
 
-			  e.dataTransfer.effectAllowed = 'move'; //wykonanie operacji przesuwania  
+			  e.dataTransfer.effectAllowed = 'move'; // allow elements for movement and making movement
 			  e.dataTransfer.setData('text/html', this.innerHTML);
 			}
 			function handleDragOver(e) 
@@ -14,32 +14,32 @@
 				e.preventDefault(); 
 			  }
 
-			  e.dataTransfer.dropEffect = 'move';  // odrzucenie operacji przesuwania
+			  e.dataTransfer.dropEffect = 'move';  // stop movement
 
 			  return false;
 			}
 
 			function handleDragEnter(e) 
 			{
-			  this.classList.add('over'); //zaladowanie stylu nowej klasy 'over' podczas przesuwania kolumny
+			  this.classList.add('over'); // adding new class during movement of the column
 			}
 
 			function handleDragLeave(e) 
 			{
-			  this.classList.remove('over');  // resetowanie stylu klasy 'over' podczas dokladania kolumny 
+			  this.classList.remove('over');  // reset class during droping te column
 			}
 			function handleDrop(e) 
 			{
 
 			  if (e.stopPropagation) 
 			  {
-				e.stopPropagation(); // zapobieganie powrocenia do poprzedniej pozycji klasy kolumny, domyslnej akcji przez przegladarke
+				e.stopPropagation(); // prevent element form return the default position
 			  }
 
-				// brak zmian podczas lapania tego samego elementu
-			  if (daneElementu != this) 
+				// stop making the changes while grabbing the same element
+			  if (SrcElement != this) 
 			  {
-				daneElementu.innerHTML = this.innerHTML;
+				SrcElement.innerHTML = this.innerHTML;
 				this.innerHTML = e.dataTransfer.getData('text/html');
 		      }
 			  return false;
@@ -48,19 +48,19 @@
 			function handleDragEnd(e) 
 			{
 
-			  [].forEach.call(cols, function (col) 
+			  [].forEach.call(columny, function (col) 
 			  {
-				col.classList.remove('over'); //usuniecie stylu z klasy 'over'
+				col.classList.remove('over'); // remove 'over' class
 			  });
 			}
-			var columny = document.querySelectorAll('#columns .column'); //zmienna weryfikujaca, dla ktorych elementow html jest wykonywane DnD 
-			//dodanie eventow
-			[].forEach.call(columny, function(col) 
+			var columns = document.querySelectorAll('#columns .column'); //variable that clarify for which elements the DnD is done
+			//adding events and their type of movement
+			[].forEach.call(columns, function(events) 
 			{
-			  col.addEventListener('dragstart', handleDragStart, false);
-			  col.addEventListener('dragenter', handleDragEnter, false);
-			  col.addEventListener('dragover', handleDragOver, false);
-			  col.addEventListener('dragleave', handleDragLeave, false);
-				col.addEventListener('drop', handleDrop, false);
-			  col.addEventListener('dragend', handleDragEnd, false); 
+			  events.addEventListener('dragstart', handleDragStart, false);
+			  events.addEventListener('dragenter', handleDragEnter, false);
+			  events.addEventListener('dragover', handleDragOver, false);
+			  events.addEventListener('dragleave', handleDragLeave, false);
+			  events.addEventListener('drop', handleDrop, false);
+			  events.addEventListener('dragend', handleDragEnd, false); 
 			});
