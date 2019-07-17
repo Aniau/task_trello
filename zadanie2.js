@@ -4,18 +4,8 @@
                 }
 
                 $(document).ready(function() {
-                    $("#sortable-listA").kendoSortable({
-                        connectWith: "#sortable-listB",
-                        placeholder: placeholder
-                    });
-
-                    $("#sortable-listB").kendoSortable({
-                        connectWith: "#sortable-listC",
-                        placeholder: placeholder
-                    });
-
-                    $("#sortable-listC").kendoSortable({
-                        connectWith: "#sortable-listA",
+                    $(".sortable_list").kendoSortable({
+                        connectWith: ".connectedSortable",
                         placeholder: placeholder
                     });
 
