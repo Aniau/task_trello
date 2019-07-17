@@ -10,3 +10,11 @@
                     });
 
                 });
+				
+				 $(document).ready(function() {
+                    $(".sortable_list1").kendoSortable({
+                        connectWith: ".connectedSortable1",
+                        placeholder: placeholder
+                    });
+
+                });
