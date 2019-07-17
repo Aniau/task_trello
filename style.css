@@ -4,31 +4,6 @@ body
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
 }
 
-#v1
-{
-	display: block;
-}
-
-.comment
-{
-	display: inline-block;
-	margin-left: 300px;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-}
-#welcome
-{
-	font-size: 35px;
-	font-weight: bold;
-	color: white;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-bottom:20px;
-	  display: inline-block;
-	  vertical-align: middle;
-}
-
 #icon
 {
 	color: white;
@@ -37,28 +12,23 @@ body
 	vertical-align:middle;
 	margin-left: 10px;
 }
-.column
+.two-way 
 {
-	background-color: 	#dfe1e6;
+    background- color: white;
+ }
+
+ .list-wrapper 
+ {
+     overflow: hidden;
+	 background-color: 	#dfe1e6;
 	width: 320px;
-	  display: inline-block;
+	display: inline-block;
 	margin: 10px;
 	border-radius: 4px;
 	vertical-align:top;
 }
 
-.column:hover
-{
-	cursor: grab;
-
-}
-
-.column.over
-{
-	opacity:0;
-}
-
-.column header
+.list-wrapper header
 {
 	margin-top: 10px;
 	margin-left: 10px;
@@ -67,14 +37,54 @@ body
 	color: #172b4d;
 	font-size: 15px;
 }
+				
+#sortable-listA, #sortable-listB, #sortable-listC 
+{ 
+	background-color: 	#dfe1e6; 
+	display: inline-block;
+	width: 320px;
+	border-radius: 4px;
+	vertical-align:top;
+	 min-height: 40px;
+}
+#backgroundColor
+{
+	background-color: 	#ced1d5;
+}
 
-.dots
+.sortable
+{
+	background-color: white;
+	width: 280px;
+	border-radius: 4px;
+	padding: 10px;
+	color: 	#172b4d;
+	overflow: hidden;
+	margin: 10px;
+	cursor: grab;
+	list-style: none;
+}
+
+#welcome1
+{
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom:20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.dots1
 {
 	margin-top: 10px;
 	margin-left: 90%;
 	color: grey;
 	font-weight: bold;
 }
+
 
 figcaption
 {
@@ -84,19 +94,46 @@ figcaption
 	font-weight: bold;
 }
 
-.card
-{
-	background-color: white;
-	width: 280px;
-	margin: 10px;
-	border-radius: 4px;
-	padding: 10px;
-	color: 	#172b4d;
-	overflow: hidden;
-	display: block;
+/* HTML5 display-role reset for older browsers */
+/*Reset Erica Meyer'a*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+	padding: 0;
+	border: 0;
+	font-size: 100%;
 }
 
-.card.over
-{
-	transform: rotate(-10deg);
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
